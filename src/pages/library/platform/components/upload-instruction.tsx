@@ -12,13 +12,13 @@ export function UploadInstruction({ maxFiles, platform }: Readonly<{ maxFiles: n
       {/* @ts-expect-error the 'as' prop is valid here as it will be passed to a Text internally */}
       <Callout.Text as='div' className='flex flex-col gap-1 text-xs'>
         <p>
-          You are uploading ROMs for{' '}
+          Nahráváš ROM pro{' '}
           <img
             alt={platformMap[platform].displayName}
             className='inline-block size-7 align-middle'
             src={getPlatformIcon(platform)}
           />
-          <b>{platformMap[platform].displayName}</b>. We support these file extensions for this platform:
+          <b>{platformMap[platform].displayName}</b>. Podporované přípony pro tuto platformu:
           <br />
           <span className='inline-flex gap-1 py-2'>
             {platformMap[platform].fileExtensions.map((extention) => (
@@ -31,7 +31,7 @@ export function UploadInstruction({ maxFiles, platform }: Readonly<{ maxFiles: n
           {
             arcade: (
               <p>
-                Using <b>Full Non-Merged ROMsets</b> can lead to simpler setups and better compatibility.
+                Používej <b>Full Non-Merged ROMsets</b> pro lepší kompatibilitu.
               </p>
             ),
             gameandwatch: (
@@ -59,7 +59,7 @@ export function UploadInstruction({ maxFiles, platform }: Readonly<{ maxFiles: n
         }
 
         <p>
-          You can upload up to <b>{maxFiles}</b> files at a time.
+          Můžeš nahrávat <b>{maxFiles}</b> souborů současně.
         </p>
       </Callout.Text>
     </Callout.Root>

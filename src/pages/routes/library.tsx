@@ -9,7 +9,7 @@ export async function loader({ request }: Route.LoaderArgs) {
   const query = url.searchParams
   const page = Number.parseInt(new URLSearchParams(query).get('page') || '', 10) || 1
   const [{ pagination, roms }, platformCount] = await Promise.all([getRoms({ page }), getRomPlatformCount()])
-  return getLoaderData({ page, pagination, platformCount, roms, title: 'Library' })
+  return getLoaderData({ page, pagination, platformCount, roms, title: 'Knihovna' })
 }
 
 export default function LibraryRoute() {

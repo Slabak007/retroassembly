@@ -59,7 +59,7 @@ export function FixedHeader() {
             <Button asChild size='2' type='button' variant='outline'>
               <Link className='!rounded-full !border-2 !bg-white !shadow-none' reloadDocument to='/library'>
                 <span className='icon-[mdi--bookshelf]' />
-                Library
+                Knihovna
               </Link>
             </Button>
           </div>

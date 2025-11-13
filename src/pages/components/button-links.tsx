@@ -18,7 +18,7 @@ export function ButtonLinks() {
           to='/library'
         >
           <span className='icon-[mdi--bookshelf]' />
-          Library
+          Knihovna
         </Link>
       </Button>
     </div>

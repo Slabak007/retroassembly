@@ -68,7 +68,7 @@ export function GameInfoDialog({ autoFocusField, children = defaultTrigger }: Re
             <Dialog.Close>
               <Button disabled={isMutating} variant='soft'>
                 <span className='icon-[mdi--close]' />
-                Cancel
+                Zrušit
               </Button>
             </Dialog.Close>
             <Button loading={isMutating} type='submit'>

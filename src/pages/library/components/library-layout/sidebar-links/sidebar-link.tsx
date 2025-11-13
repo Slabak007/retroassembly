@@ -27,7 +27,7 @@ export function SidebarLink({ active, children, to }) {
       <Button asChild size='3' variant='ghost'>
         <NavigatableLink
           className={clsx('sidebar-link', 'group !m-0 !flex !h-auto !px-4 !py-2.5', {
-            '!bg-[#651723]/60 !font-semibold !text-white': active,
+            '!bg-[#111111]/60 !font-semibold !text-white': active,
             '!text-white hover:!bg-inherit': !active,
             active,
           })}

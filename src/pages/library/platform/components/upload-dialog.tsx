@@ -162,10 +162,10 @@ export function UploadDialog({ platform, toggleOpen }: Readonly<{ platform: Plat
                   <span className='text-(--accent-11) text-sm'>Drop files here</span>
                 ) : (
                   <>
-                    <span className='text-(--accent-11) text-sm'>Drag files here or</span>
+                    <span className='text-(--accent-11) text-sm'>Přetáhni soubory sem nebo</span>
                     <Button onClick={handleClickSelect} size='2'>
                       <span className='icon-[mdi--folder-open]' />
-                      Select files
+                      Vyber soubory
                     </Button>
                   </>
                 )}
@@ -200,7 +200,7 @@ export function UploadDialog({ platform, toggleOpen }: Readonly<{ platform: Plat
                 <Dialog.Close>
                   <Button variant='soft'>
                     <span className='icon-[mdi--close]' />
-                    Cancel
+                    Zrušit
                   </Button>
                 </Dialog.Close>
               </div>

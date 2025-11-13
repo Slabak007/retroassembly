@@ -49,7 +49,7 @@ export function ErrorPage({ error }: Readonly<Route.ErrorBoundaryProps>) {
                 to='/library'
               >
                 <span className='icon-[mdi--bookshelf]' />
-                Library
+                Knihovna
               </Link>
             </Button>
           </div>

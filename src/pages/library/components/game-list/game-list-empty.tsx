@@ -19,7 +19,7 @@ export function GameListEmpty() {
       {isLibrary ? (
         <>
           <div className='text-(--gray-11)'>
-            Welcome to {metadata.title}. This is where all ROMs uploaded by you will appear.
+            Vítejte na {metadata.title}. This is where all ROMs uploaded by you will appear.
           </div>
           <div className='text-(--gray-11)'>
             <UploadSelectButton variant='soft' /> some ROMs to get started.
@@ -34,7 +34,7 @@ export function GameListEmpty() {
             Play some games from your{' '}
             <Button asChild variant='outline'>
               <Link to='/library'>
-                <span className='icon-[mdi--bookshelf] ' /> Library
+                <span className='icon-[mdi--bookshelf] ' /> Knihovna
               </Link>
             </Button>
           </div>

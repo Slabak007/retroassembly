@@ -60,7 +60,7 @@ export function DeleteDialog(props: Readonly<AlertDialog.RootProps>) {
           <AlertDialog.Cancel>
             <Button disabled={isLoading}>
               <span className='icon-[mdi--close]' />
-              Cancel
+              Zrušit
             </Button>
           </AlertDialog.Cancel>
           <Button loading={isLoading} onClick={handleClickConfirmDelete} variant='soft'>

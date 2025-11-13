@@ -23,7 +23,7 @@ export function GameListActions() {
             <span className='icon-[mdi--order-checkbox-ascending]' />
             <span>
               Selected <span className='text-(--accent-9) font-semibold'>{selectedGames.length}</span>{' '}
-              {selectedGames.length === 1 ? 'game' : 'games'}
+              {selectedGames.length === 1 ? 'hra' : (selectedGames.length >= 2 && selectedGames.length <= 4 ? 'hry' : 'her')}
             </span>
 
             <AnimatePresence>
@@ -47,7 +47,7 @@ export function GameListActions() {
 
             <Button onClick={() => setSelectedGames([])} type='button' variant='soft'>
               <span className='icon-[mdi--close]' />
-              Cancel
+              Zrušit
             </Button>
           </div>
         </motion.div>

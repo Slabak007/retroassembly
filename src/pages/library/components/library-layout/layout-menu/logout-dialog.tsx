@@ -20,7 +20,7 @@ export function LogoutDialog(props: Readonly<AlertDialog.RootProps>) {
           <AlertDialog.Cancel>
             <Button>
               <span className='icon-[mdi--close]' />
-              Cancel
+              Zrušit
             </Button>
           </AlertDialog.Cancel>
           <Button onClick={handleClickLogout} variant='soft'>

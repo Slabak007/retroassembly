@@ -28,18 +28,18 @@ export function useNavigationLinks() {
   const groups = [
     {
       links: [
-        { iconClass: 'icon-[mdi--bookshelf]', iconUrl: '', name: 'library', text: 'Library', to: `/${libraryPath}` },
+        { iconClass: 'icon-[mdi--bookshelf]', iconUrl: '', name: 'library', text: 'Knihovna', to: `/${libraryPath}` },
       ],
       title: '',
     },
-    { links: sortedPlatformLinks, title: 'Platforms' },
+    { links: sortedPlatformLinks, title: 'Platformy' },
   ]
   if (!isDemo) {
     const historyLink = {
       iconClass: 'icon-[mdi--history]',
       iconUrl: '',
       name: 'history',
-      text: 'History',
+      text: 'Historie',
       to: `/${libraryPath}/history`,
     }
     groups[0].links.push(historyLink)

@@ -17,9 +17,9 @@ export default function HistoryPage() {
         <h1 className='text-5xl font-semibold'>{title}</h1>
         <PageStats>
           <span className='icon-[mdi--bar-chart] text-(--color-text)' />
-          Played
-          <span className='font-bold text-rose-700'>{pagination.total}</span>
-          {pagination.total === 1 ? 'game' : 'games'}
+          Zahráno
+          <span className='font-bold'>{pagination.total}</span>
+          {pagination.total === 1 ? 'hra' : (pagination.total >= 2 && pagination.total <= 4 ? 'hry' : 'her')}
         </PageStats>
       </GameListMain>
     </LibraryLayout>

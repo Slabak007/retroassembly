@@ -16,7 +16,7 @@ export function PageBreadcrumb() {
   const links = [
     {
       icon: <span className='icon-[mdi--bookshelf] size-5 p-0.5' />,
-      text: 'Library',
+      text: 'Knihovna',
       url: `/${libraryPath}`,
     },
   ]

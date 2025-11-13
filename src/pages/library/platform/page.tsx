@@ -36,7 +36,7 @@ export default function PlatformPage() {
             <PageStats suffix={<UploadButton platform={platform} />}>
               <span className='icon-[mdi--bar-chart] text-(--color-text)' />
               <span className='text-(--accent-9) font-semibold'>{pagination.total}</span>
-              {pagination.total === 1 ? 'game' : 'games'} for {platformMap[platform].displayName}.
+              {pagination.total === 1 ? 'hra' : (pagination.total >= 2 && pagination.total <= 4 ? 'hry' : 'her')} pro {platformMap[platform].displayName}.
             </PageStats>
           )}
         </div>

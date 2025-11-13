@@ -31,15 +31,15 @@ export function StatusBar() {
           </span>
           <span className='flex items-center gap-2'>
             <span className='icon-[mdi--gamepad] text-white' />
-            Navigation
+            Navigace
           </span>
           <span className='flex items-center gap-2'>
             {{ nintendo: rightButtonIcon, xbox: downButtonIcon }[confirmButtonStyle]}
-            Confirm
+            Potvrdit
           </span>
           <span className='flex items-center gap-2'>
             {{ nintendo: downButtonIcon, xbox: rightButtonIcon }[confirmButtonStyle]}
-            Back
+            Zpět
           </span>
         </>
       ) : (
@@ -56,7 +56,7 @@ export function StatusBar() {
                 .map((key) => capitalize(key))
                 .join(' ')}
             </Kbd>
-            Navigation
+            Navigace
           </span>
 
           {keyboarMappingConfirm ? (
@@ -64,7 +64,7 @@ export function StatusBar() {
               <Kbd className='!text-(--accent-9)' size='1'>
                 {uniq(['Enter', capitalize(keyboarMappingConfirm)]).join(' / ')}
               </Kbd>
-              Confirm
+              Potvrdit
             </span>
           ) : null}
 
@@ -73,7 +73,7 @@ export function StatusBar() {
               <Kbd className='!text-(--accent-9)' size='1'>
                 {capitalize(keyboarMappingCancel)}
               </Kbd>
-              Back
+              Zpět
             </span>
           ) : null}
         </>
