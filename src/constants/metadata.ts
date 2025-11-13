@@ -1,6 +1,6 @@
 export const metadata = {
   buildDate: import.meta.env?.RETROASSEMBLY_BUILD_TIME_VITE_BUILD_TIME,
-  description: 'The personal retro game collection cabinet in your browser',
+  description: 'Osobní sbírka retro her ve vašem prohlížeči',
   domain: 'retroassembly.com',
   link: 'https://retroassembly.com/',
   themeColor: '#be123c',
