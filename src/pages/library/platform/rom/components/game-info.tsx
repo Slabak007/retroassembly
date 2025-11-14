@@ -13,19 +13,19 @@ export function GameInfo({ rom }) {
     launchboxGame.releaseYear
   const releaseDate = new Date(`${releaseDateValue}`)
   const releaseDateTime = DateTime.fromJSDate(releaseDate, { zone: 'utc' })
-  const relativeReleaseDate = releaseDateTime.isValid ? releaseDateTime.toRelative({ locale: 'en' }) : null
+  const relativeReleaseDate = releaseDateTime.isValid ? releaseDateTime.toRelative({ locale: 'cs' }) : null
 
   const items = [
     {
       icon: 'icon-[mdi--computer-classic]',
       name: '',
-      title: 'Platform',
+      title: 'Platforma',
       value: platformMap[rom.platform].displayName,
     },
     {
       icon: 'icon-[mdi--calendar]',
       name: 'gameReleaseDate',
-      title: 'Released',
+      title: 'Vydáno',
       value: releaseDateValue ? (
         <>
           {releaseDateValue}
@@ -38,25 +38,25 @@ export function GameInfo({ rom }) {
     {
       icon: 'icon-[mdi--tag-multiple]',
       name: 'gameGenres',
-      title: 'Genres',
+      title: 'Žánry',
       value: (rom.gameGenres ?? launchboxGame.genres)?.trim() || unknown,
     },
     {
       icon: 'icon-[mdi--person-multiple]',
       name: 'gamePlayers',
-      title: 'Players',
+      title: 'Hráči',
       value: rom.gamePlayers ?? launchboxGame.maxPlayers ?? unknown,
     },
     {
       icon: 'icon-[mdi--chip]',
       name: 'gameDeveloper',
-      title: 'Developer',
+      title: 'Vývojář',
       value: (rom.gameDeveloper ?? launchboxGame.developer)?.trim() || unknown,
     },
     {
       icon: 'icon-[mdi--earth]',
       name: 'gamePublisher',
-      title: 'Publisher',
+      title: 'Vydavatel',
       value: (rom.gamePublisher ?? launchboxGame.publisher)?.trim() || unknown,
     },
   ]

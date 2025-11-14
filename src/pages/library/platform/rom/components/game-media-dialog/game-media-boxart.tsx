@@ -45,7 +45,7 @@ export function GameMediaBoxart() {
           disabled={isResettingingBoxart}
           loading={isUploadingBoxart}
           onClick={handleClickUploadBoxart}
-          title='Upload'
+          title='Nahrát'
           variant='soft'
         >
           <span className='icon-[mdi--upload]' />
@@ -55,7 +55,7 @@ export function GameMediaBoxart() {
           disabled={isUploadingBoxart}
           loading={isResettingingBoxart}
           onClick={handleClickResetBoxart}
-          title='Reset to defaults'
+          title='Obnovit výchozí nastavení'
           type='button'
           variant='soft'
         >

@@ -11,10 +11,10 @@ export function LogoutDialog(props: Readonly<AlertDialog.RootProps>) {
       <AlertDialog.Content>
         <AlertDialog.Title className='flex items-center gap-2'>
           <span className='icon-[mdi--hand-wave]' />
-          Log out of {metadata.title}?
+          Odhlášení z {metadata.title}?
         </AlertDialog.Title>
 
-        <AlertDialog.Description>You can always log back in at any time.</AlertDialog.Description>
+        <AlertDialog.Description>Kdykoli se můžete znovu přihlásit.</AlertDialog.Description>
 
         <div className='mt-4 flex justify-end gap-4'>
           <AlertDialog.Cancel>
@@ -25,7 +25,7 @@ export function LogoutDialog(props: Readonly<AlertDialog.RootProps>) {
           </AlertDialog.Cancel>
           <Button onClick={handleClickLogout} variant='soft'>
             <span className='icon-[mdi--logout]' />
-            Log out
+            Odhlásit
           </Button>
         </div>
       </AlertDialog.Content>

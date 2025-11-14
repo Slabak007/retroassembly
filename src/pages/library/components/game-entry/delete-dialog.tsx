@@ -71,7 +71,7 @@ export function DeleteDialog({ rom, ...props }: Readonly<DeleteDialogProps>) {
           </AlertDialog.Cancel>
           <Button loading={isLoading} onClick={handleClickConfirmDelete} variant='soft'>
             <span className='icon-[mdi--delete]' />
-            Delete
+            Odstranit
           </Button>
         </div>
       </AlertDialog.Content>

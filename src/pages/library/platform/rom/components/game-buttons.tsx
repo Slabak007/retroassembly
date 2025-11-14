@@ -84,7 +84,7 @@ export function GameButtons({ state }: Readonly<{ state?: State }>) {
               )}
             />
           )}
-          <span className='w-52 text-2xl font-semibold'>Continue</span>
+          <span className='w-52 text-2xl font-semibold'>Pokračovat</span>
           <HoverCard.Root>
             <HoverCard.Trigger>
               <img

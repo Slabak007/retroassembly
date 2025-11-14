@@ -10,10 +10,10 @@ const { $patch } = client.auth.password
 
 function validateFormData(formData: FormData) {
   if (formData.get('new_password') !== formData.get('repeat_new_password')) {
-    throw new Error('Passwords do not match')
+    throw new Error('Heslo nesouhlasí')
   }
   if (formData.get('new_password') === formData.get('password')) {
-    throw new Error('The new password is the same as the current password')
+    throw new Error('Heslo je stejné jako původní')
   }
   return {
     new_password: `${formData.get('new_password')}`,
@@ -27,15 +27,15 @@ export function AccountSettings() {
     {
       defaultValue: currentUser.username,
       iconClass: 'icon-[mdi--user-card-details]',
-      label: 'Username',
+      label: 'Uživatelské jméno',
       name: 'username',
       readOnly: true,
     },
-    { iconClass: 'icon-[mdi--password]', label: 'Current Password', name: 'password', type: 'password' },
-    { iconClass: 'icon-[mdi--password-add]', label: 'New Password', name: 'new_password', type: 'password' },
+    { iconClass: 'icon-[mdi--password]', label: 'Současné heslo', name: 'password', type: 'password' },
+    { iconClass: 'icon-[mdi--password-add]', label: 'Nové heslo', name: 'new_password', type: 'password' },
     {
       iconClass: 'icon-[mdi--password-check]',
-      label: 'Repeat New Password',
+      label: 'Opakujte nové heslo',
       name: 'repeat_new_password',
       type: 'password',
     },
@@ -60,7 +60,7 @@ export function AccountSettings() {
     <div>
       <SettingsTitle>
         <span className='icon-[mdi--password]' />
-        Password
+        Heslo
       </SettingsTitle>
       <Card>
         <form className='lg:w-xl flex flex-col gap-2' onSubmit={handleSubmit}>
@@ -70,11 +70,11 @@ export function AccountSettings() {
             ))}
           </div>
           <div className='pl-2 text-xs opacity-50'>
-            Recommendation: 10+ characters with letters, numbers, and symbols.
+            Doporučení: 10+ znaků, kombinace písmen, čísel a symbolů.
           </div>
           <Button className='!mt-2' loading={isMutating} type='submit'>
             <span className='icon-[mdi--password-check]' />
-            Update Password
+            Aktualizovat heslo
           </Button>
 
           {data ? (
@@ -82,7 +82,7 @@ export function AccountSettings() {
               <Callout.Icon>
                 <span className='icon-[mdi--check]' />
               </Callout.Icon>
-              <Callout.Text>Your password has been updated</Callout.Text>
+              <Callout.Text>Vaše heslo bylo aktualizováno</Callout.Text>
             </Callout.Root>
           ) : null}
 
@@ -91,7 +91,7 @@ export function AccountSettings() {
               <Callout.Icon>
                 <span className='icon-[mdi--information]' />
               </Callout.Icon>
-              <Callout.Text>{error.message || 'Unknown error'}</Callout.Text>
+              <Callout.Text>{error.message || 'Neznámá chyba'}</Callout.Text>
             </Callout.Root>
           ) : null}
         </form>

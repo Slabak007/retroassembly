@@ -138,9 +138,9 @@ export function UploadDialog({ platform, toggleOpen }: Readonly<{ platform: Plat
       <Dialog.Title>
         {
           {
-            done: 'ROMs uploaded',
-            initial: 'Select ROMs',
-            loading: 'Uploading ROMs',
+            done: 'ROMy nahrány',
+            initial: 'Vyberte ROMy',
+            loading: 'Nahrávání ROMů',
           }[status]
         }
       </Dialog.Title>
@@ -159,13 +159,13 @@ export function UploadDialog({ platform, toggleOpen }: Readonly<{ platform: Plat
                 )}
               >
                 {isDragActive ? (
-                  <span className='text-(--accent-11) text-sm'>Drop files here</span>
+                  <span className='text-(--accent-11) text-sm'>Přetáhněte soubory sem</span>
                 ) : (
                   <>
-                    <span className='text-(--accent-11) text-sm'>Přetáhni soubory sem nebo</span>
+                    <span className='text-(--accent-11) text-sm'>Přetáhněte soubory sem nebo</span>
                     <Button onClick={handleClickSelect} size='2'>
                       <span className='icon-[mdi--folder-open]' />
-                      Vyber soubory
+                      Vyberte soubory
                     </Button>
                   </>
                 )}
@@ -174,8 +174,7 @@ export function UploadDialog({ platform, toggleOpen }: Readonly<{ platform: Plat
               {isOfficialHost ? (
                 <div className='text-(--accent-9) mt-4 flex flex-col gap-1 text-xs'>
                   <p>
-                    Please upload only ROMs you legally own, such as personal backups of games you purchased or homebrew
-                    titles. By uploading, you confirm compliance with all applicable laws.
+                    Nahrajte pouze ROMy, které vlastníte legálně, například zálohy her, které jste zakoupili, nebo homebrew tituly. Nahráním potvrzujete dodržování všech platných zákonů.
                   </p>
                   <p>
                     Useful links about dumping ROMs:{' '}
@@ -220,7 +219,7 @@ export function UploadDialog({ platform, toggleOpen }: Readonly<{ platform: Plat
                 {uploadedFiles.success.length + uploadedFiles.failure.length + uploadedFiles.loading.length}/
                 {files.length},
                 {uploadedFiles.failure.length > 0 ? <span>{uploadedFiles.failure.length} Failed.</span> : null}
-                <span>Please do not turn off your device!</span>
+                <span>Prosím, nevypínejte své zařízení!</span>
               </div>
             </div>
           ),
@@ -228,14 +227,14 @@ export function UploadDialog({ platform, toggleOpen }: Readonly<{ platform: Plat
           done: (
             <div>
               <div className='py-10 text-center'>
-                🎉 {uploadedFiles.success.length}/{files.length} ROM(s) have been uploaded.
+                🎉 {uploadedFiles.success.length}/{files.length} ROM(y) byly nahrány.
               </div>
 
               <div className='mt-4 flex justify-end'>
                 <Dialog.Close>
                   <Button onClick={handleClickDone} variant='soft'>
                     <span className='icon-[mdi--check]' />
-                    Done
+                    Hotovo
                   </Button>
                 </Dialog.Close>
               </div>

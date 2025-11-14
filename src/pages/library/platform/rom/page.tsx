@@ -79,7 +79,7 @@ export default function RomPage() {
                     rel='noreferrer noopener'
                     target='_blank'
                   >
-                    <span className='icon-[mdi--wikipedia] size-6' /> Read more on Wikipedia.
+                    <span className='icon-[mdi--wikipedia] size-6' /> Přečti si více na Wikipedii.
                   </a>
                 </div>
               ) : null}

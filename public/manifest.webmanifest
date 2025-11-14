@@ -1,12 +1,12 @@
 {
   "name": "RetroAssembly",
   "short_name": "RetroAssembly",
-  "description": "The personal retro game collection cabinet in your browser",
+  "description": "Osobní kolekce s retro hrami ve vašem prohlížeči",
   "start_url": "/library",
   "display": "standalone",
   "background_color": "#be123c",
   "theme_color": "#be123c",
-  "lang": "en",
+  "lang": "cs",
   "scope": "/",
   "id": "?pwa_version=1",
   "icons": [

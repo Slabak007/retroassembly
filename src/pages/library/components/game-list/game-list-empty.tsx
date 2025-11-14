@@ -19,19 +19,19 @@ export function GameListEmpty() {
       {isLibrary ? (
         <>
           <div className='text-(--gray-11)'>
-            Vítejte na {metadata.title}. This is where all ROMs uploaded by you will appear.
+            Vítejte na {metadata.title}. Zde se zobrazí všechny ROMy, které jste nahráli.
           </div>
           <div className='text-(--gray-11)'>
-            <UploadSelectButton variant='soft' /> some ROMs to get started.
+            <UploadSelectButton variant='soft' /> nějaké ROMy pro začátek.
           </div>
         </>
       ) : null}
 
       {isHistory ? (
         <>
-          <div className='text-(--gray-11)'>You haven't played any games yet.</div>
+          <div className='text-(--gray-11)'>Ještě jste nehráli žádnou hru.</div>
           <div className='text-(--gray-11)'>
-            Play some games from your{' '}
+            Zahrajte si nějakou z {' '}
             <Button asChild variant='outline'>
               <Link to='/library'>
                 <span className='icon-[mdi--bookshelf] ' /> Knihovna
@@ -44,17 +44,17 @@ export function GameListEmpty() {
       {platform ? (
         <>
           <div className='text-(--gray-11) flex items-center gap-1'>
-            There are no games for{' '}
+            Zatím zde nejsou žádné hry pro{' '}
             <img
               alt={platform?.displayName}
               className='hidden size-7 lg:inline-block'
               loading='lazy'
               src={getPlatformIcon(platform.name)}
             />{' '}
-            {platform?.displayName} in your library.
+            {platform?.displayName} v knihovně.
           </div>
           <div className='text-(--gray-11) flex items-center gap-1'>
-            <UploadButton platform={platform?.name} variant='soft' /> some ROMs to get started.
+            <UploadButton platform={platform?.name} variant='soft' /> nějaké ROMy pro začátek.
           </div>
         </>
       ) : null}

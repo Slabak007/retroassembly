@@ -95,7 +95,7 @@ export function BIOSOptions({ platform }: { platform: PlatformName }) {
               {fileName}
               <Popover.Root>
                 <Popover.Trigger>
-                  <IconButton disabled={disabled} size='1' title='Delete' type='button' variant='ghost'>
+                  <IconButton disabled={disabled} size='1' title='Odstranit' type='button' variant='ghost'>
                     <span className='icon-[mdi--close]' />
                   </IconButton>
                 </Popover.Trigger>
@@ -108,7 +108,7 @@ export function BIOSOptions({ platform }: { platform: PlatformName }) {
                     variant='soft'
                   >
                     <span className='icon-[mdi--delete]' />
-                    Confirm Delete
+                    Potvrdit smazání
                   </Button>
                 </Popover.Content>
               </Popover.Root>

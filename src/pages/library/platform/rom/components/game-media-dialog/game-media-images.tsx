@@ -62,7 +62,7 @@ export function GameMediaImages() {
             className='absolute right-0 top-0 flex size-4 -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-full bg-black text-white'
             disabled={isDeletingThumbnail || isUploadingThumbnail}
             onClick={() => handleClickDeleteThumbnail(thumbnailFileId)}
-            title='Delete'
+            title='Odstranit'
             type='button'
           >
             <span className='icon-[mdi--close]' />

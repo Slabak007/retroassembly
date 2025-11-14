@@ -50,10 +50,10 @@ export function DeleteDialog(props: Readonly<AlertDialog.RootProps>) {
     <AlertDialog.Root {...props}>
       <AlertDialog.Content maxWidth='450px'>
         <AlertDialog.Title>
-          Delete selected {selectedGames.length} {selectedGames.length === 1 ? 'ROM' : 'ROMs'}
+          Odstranit vybrané {selectedGames.length} {selectedGames.length === 1 ? 'ROM' : 'ROMs'}
         </AlertDialog.Title>
         <AlertDialog.Description className='whitespace-pre-line !leading-loose' size='2'>
-          {'Are you sure to proceed?\nThe deleted ROMs cannot be restored.'}
+          {'Opravdu chcete pokračovat?\nOdstraněné ROMy nebude možné obnovit.'}
         </AlertDialog.Description>
 
         <div className='mt-4 flex justify-end gap-3'>
@@ -65,7 +65,7 @@ export function DeleteDialog(props: Readonly<AlertDialog.RootProps>) {
           </AlertDialog.Cancel>
           <Button loading={isLoading} onClick={handleClickConfirmDelete} variant='soft'>
             <span className='icon-[mdi--delete]' />
-            Delete
+            Odstranit
           </Button>
         </div>
       </AlertDialog.Content>

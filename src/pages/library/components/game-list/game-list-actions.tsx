@@ -22,7 +22,7 @@ export function GameListActions() {
           <div className='flex items-center gap-2'>
             <span className='icon-[mdi--order-checkbox-ascending]' />
             <span>
-              Selected <span className='text-(--accent-9) font-semibold'>{selectedGames.length}</span>{' '}
+              Vybráno:  <span className='text-(--accent-9) font-semibold'>{selectedGames.length}</span>{' '}
               {selectedGames.length === 1 ? 'hra' : (selectedGames.length >= 2 && selectedGames.length <= 4 ? 'hry' : 'her')}
             </span>
 
@@ -31,7 +31,7 @@ export function GameListActions() {
                 <motion.div animate={{ opacity: 1 }} exit={{ opacity: 0 }} initial={{ opacity: 0 }} layout>
                   <Button onClick={() => setSelectedGames(roms.map(({ id }) => id))} type='button' variant='soft'>
                     <span className='icon-[mdi--check-all]' />
-                    Select all
+                    Vybrat vše
                   </Button>
                 </motion.div>
               ) : null}
@@ -41,7 +41,7 @@ export function GameListActions() {
           <div className='flex gap-2'>
             <Button onClick={() => setDeleteDialogOpen(true)} type='button' variant='soft'>
               <span className='icon-[mdi--delete]' />
-              Delete selected {selectedGames.length} {selectedGames.length === 1 ? 'ROM' : 'ROMs'}
+              Odstranit vybrané {selectedGames.length} {selectedGames.length === 1 ? 'ROM' : 'ROMs'}
             </Button>
             <DeleteDialog onOpenChange={setDeleteDialogOpen} open={deleteDialogOpen} />
 

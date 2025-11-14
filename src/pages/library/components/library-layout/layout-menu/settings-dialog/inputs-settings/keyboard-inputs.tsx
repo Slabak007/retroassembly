@@ -83,9 +83,9 @@ const buttonGroups: ButtonGroup[] = [
   },
   {
     buttons: [
-      { iconClass: 'icon-[mdi--pause]', name: '$pause', text: 'Pause' },
-      { iconClass: 'icon-[mdi--rewind]', name: 'input_rewind', text: 'Rewind' },
-      { iconClass: 'icon-[mdi--fast-forward]', name: 'input_hold_fast_forward', text: 'Fast forward' },
+      { iconClass: 'icon-[mdi--pause]', name: '$pause', text: 'Pauza' },
+      { iconClass: 'icon-[mdi--rewind]', name: 'input_rewind', text: 'Přetočit zpět' },
+      { iconClass: 'icon-[mdi--fast-forward]', name: 'input_hold_fast_forward', text: 'Rychlé přetáčení' },
     ],
     type: 'time',
   },
@@ -106,7 +106,7 @@ export function KeyboardInputs() {
         <div className='flex justify-end'>
           <UpdateButton preference={{ input: { keyboardMapping: null } }}>
             <span className='icon-[mdi--undo]' />
-            Reset to defaults
+            Obnovit výchozí nastavení
           </UpdateButton>
         </div>
       </div>

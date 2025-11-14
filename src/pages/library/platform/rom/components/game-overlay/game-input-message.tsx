@@ -10,9 +10,9 @@ export function GameInputMessage() {
 
   const messages: { keyNames: string[]; message: ReactNode }[] = connected
     ? [
-        { keyNames: ['L1', 'R1'], message: 'Pause' },
-        { keyNames: ['Select', 'L2'], message: 'Rewind' },
-        { keyNames: ['Select', 'R2'], message: 'Fast forward' },
+        { keyNames: ['L1', 'R1'], message: 'Pauza' },
+        { keyNames: ['Select', 'L2'], message: 'Přetočit zpět' },
+        { keyNames: ['Select', 'R2'], message: 'Rychlé přetáčení' },
       ]
     : [
         {
@@ -44,9 +44,9 @@ export function GameInputMessage() {
           keyNames: compact([keyboardMapping.input_player1_b]),
           message: <span className='icon-[mdi--gamepad-circle-down]' />,
         },
-        { keyNames: compact([keyboardMapping.$pause]), message: 'Pause' },
-        { keyNames: compact([keyboardMapping.input_rewind]), message: 'Rewind' },
-        { keyNames: compact([keyboardMapping.input_hold_fast_forward]), message: 'Fast forward' },
+        { keyNames: compact([keyboardMapping.$pause]), message: 'Pauza' },
+        { keyNames: compact([keyboardMapping.input_rewind]), message: 'Přetočit zpět' },
+        { keyNames: compact([keyboardMapping.input_hold_fast_forward]), message: 'Rychlé přetáčení' },
       ]
 
   return messages

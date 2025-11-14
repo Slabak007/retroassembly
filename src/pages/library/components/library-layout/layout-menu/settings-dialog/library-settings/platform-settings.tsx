@@ -14,7 +14,7 @@ export function PlatformSettings() {
     <div>
       <SettingsTitle>
         <span className='icon-[mdi--order-checkbox-ascending]' />
-        Enabled Platforms
+        Povolené platformy
       </SettingsTitle>
       <Card>
         <CheckboxCards.Root columns={{ initial: '1', md: '4' }} size='1' value={preference.ui.platforms}>
@@ -31,13 +31,13 @@ export function PlatformSettings() {
           {platforms.length > preference.ui.platforms.length ? (
             <UpdateButton preference={{ ui: { platforms: platforms.map(({ name }) => name) } }}>
               <span className='icon-[mdi--checkbox-multiple-marked]' />
-              Select all
+              Vybrat vše
             </UpdateButton>
           ) : null}
 
           <UpdateButton preference={{ ui: { platforms: null } }}>
             <span className='icon-[mdi--undo]' />
-            Reset to defaults
+            Obnovit výchozí nastavení
           </UpdateButton>
         </div>
       </Card>

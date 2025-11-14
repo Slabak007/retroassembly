@@ -16,7 +16,7 @@ export function GameStates() {
     <>
       <h3 className='flex items-center gap-2 text-2xl font-semibold text-white'>
         <span className='icon-[mdi--database] size-7' />
-        Saved States
+        Uložené pozice
       </h3>
 
       {[

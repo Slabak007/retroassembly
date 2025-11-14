@@ -21,25 +21,25 @@ export function ThemeMenuItem() {
     <DropdownMenu.Sub>
       <DropdownMenu.SubTrigger>
         <span className='icon-[mdi--theme-light-dark]' />
-        Theme
+        Téma
       </DropdownMenu.SubTrigger>
       <DropdownMenu.SubContent>
         <DropdownMenu.Item onClick={() => updateTheme('')}>
           <span className={clsx('icon-[mdi--check]', { 'opacity-0': theme !== 'system' })} />
           {systemTheme === 'light' ? <span className='icon-[mdi--weather-sunny]' /> : null}
           {systemTheme === 'dark' ? <span className='icon-[mdi--moon-and-stars]' /> : null}
-          System
+          Systém
         </DropdownMenu.Item>
         <DropdownMenu.Separator />
         <DropdownMenu.Item onClick={() => updateTheme('light')}>
           <span className={clsx('icon-[mdi--check]', { 'opacity-0': theme !== 'light' })} />
           <span className='icon-[mdi--weather-sunny]' />
-          Light
+          Světlé
         </DropdownMenu.Item>
         <DropdownMenu.Item onClick={() => updateTheme('dark')}>
           <span className={clsx('icon-[mdi--check]', { 'opacity-0': theme !== 'dark' })} />
           <span className='icon-[mdi--moon-and-stars]' />
-          Dark
+          Tmavé
         </DropdownMenu.Item>
       </DropdownMenu.SubContent>
     </DropdownMenu.Sub>

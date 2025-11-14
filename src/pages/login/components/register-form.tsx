@@ -49,7 +49,7 @@ export function RegisterForm({ redirectTo }: Readonly<{ redirectTo: string }>) {
           type='submit'
         >
           <span className='icon-[mdi--register]' />
-          Create your account
+          Vytvořit účet
         </Button>
       </div>
 

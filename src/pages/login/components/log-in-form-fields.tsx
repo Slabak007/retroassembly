@@ -5,16 +5,16 @@ export function LoginFormFields({ register = false }: Readonly<{ register?: bool
     <>
       <AccountFormField
         autoFocus
-        description={register ? 'E.g., johnsmith, admin' : ''}
+        description={register ? 'Např. johnsmith, admin' : ''}
         iconClass='icon-[mdi--user-card-details]'
-        label='Username'
+        label='Uživatelské jméno'
         name='username'
       />
 
       <AccountFormField
-        description={register ? 'Recommendation: 10+ characters with letters, numbers, and symbols.' : ''}
+        description={register ? 'Doporučení: 10 a více znaků, kombinace písmen, čísel a symbolů.' : ''}
         iconClass='icon-[mdi--password]'
-        label='Password'
+        label='Heslo'
         name='password'
         type='password'
       />
@@ -22,7 +22,7 @@ export function LoginFormFields({ register = false }: Readonly<{ register?: bool
       {register ? (
         <AccountFormField
           iconClass='icon-[mdi--password-check]'
-          label='Repeat password'
+          label='Opakujte heslo'
           name='repeat_password'
           type='password'
         />

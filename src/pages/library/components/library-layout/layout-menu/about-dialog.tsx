@@ -13,7 +13,7 @@ export function AboutDialog({ onOpenChange, ...props }: Readonly<Dialog.RootProp
     <DialogRoot {...props} onOpenChange={handleOpenChange}>
       <Dialog.Content aria-describedby={undefined} width='360px'>
         <VisuallyHidden>
-          <Dialog.Title className='flex items-center gap-2'>About</Dialog.Title>
+          <Dialog.Title className='flex items-center gap-2'>O aplikaci</Dialog.Title>
         </VisuallyHidden>
         <div className='flex flex-col items-center gap-2 p-2 text-center'>
           <img alt='logo' height='56' src='/assets/logo/logo-192x192.png' width='56' />

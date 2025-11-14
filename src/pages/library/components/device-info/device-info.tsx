@@ -27,7 +27,7 @@ export function DeviceInfo({ platform, platformInfo }: Readonly<{ platform: stri
   }
 
   const releaseDateTime = DateTime.fromISO(platformInfo.releaseDate)
-  const relativeReleaseDate = releaseDateTime.isValid ? releaseDateTime.toRelative({ locale: 'en' }) : null
+  const relativeReleaseDate = releaseDateTime.isValid ? releaseDateTime.toRelative({ locale: 'cs' }) : null
 
   return (
     <div className='flex flex-col lg:flex-row'>
@@ -41,7 +41,7 @@ export function DeviceInfo({ platform, platformInfo }: Readonly<{ platform: stri
             <div>
               <div className='flex h-6 items-center gap-2 font-semibold'>
                 <span className='icon-[mdi--calendar]' />
-                <span className='text-xs'>Released</span>
+                <span className='text-xs'>Vydáno</span>
               </div>
               <div className='mt-1 pl-6'>
                 {releaseDateTime.isValid ? (
@@ -59,7 +59,7 @@ export function DeviceInfo({ platform, platformInfo }: Readonly<{ platform: stri
               <div>
                 <div className='flex h-6 items-center gap-2 font-semibold'>
                   <span className='icon-[mdi--factory]' />
-                  <span className='text-xs'>Developer & Manufacturer</span>
+                  <span className='text-xs'>Vývojář a výrobce</span>
                 </div>
                 <div className='mt-1 pl-6'>
                   <CompanyLogo className='h-5' company={manufacturer || ''} fallback={manufacturer || 'unknown'} />
@@ -70,7 +70,7 @@ export function DeviceInfo({ platform, platformInfo }: Readonly<{ platform: stri
                 <div>
                   <div className='flex h-6 items-center gap-2 font-semibold'>
                     <span className='icon-[mdi--factory]' />
-                    <span className='text-xs'>Developer</span>
+                    <span className='text-xs'>Vývojář</span>
                   </div>
                   <div className='mt-1 pl-6'>
                     <CompanyLogo className='h-5' company={developer || ''} fallback={developer || 'unknown'} />
@@ -79,7 +79,7 @@ export function DeviceInfo({ platform, platformInfo }: Readonly<{ platform: stri
                 <div>
                   <div className='flex h-6 items-center gap-2 font-semibold'>
                     <span className='icon-[mdi--factory]' />
-                    <span className='text-xs'>Manufacturer</span>
+                    <span className='text-xs'>Výrobce</span>
                   </div>
                   <div className='mt-1 pl-6'>
                     <CompanyLogo className='h-5' company={manufacturer || ''} fallback={manufacturer || 'unknown'} />

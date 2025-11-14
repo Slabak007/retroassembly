@@ -10,10 +10,10 @@ import { InputsSettings } from './inputs-settings/inputs-setting.tsx'
 import { LibrarySettings } from './library-settings/library-settings.tsx'
 
 const allSettingsTabs = [
-  { content: LibrarySettings, iconClass: 'icon-[mdi--bookshelf]', name: 'library' },
-  { content: InputsSettings, iconClass: 'icon-[mdi--controller]', name: 'inputs' },
-  { content: EmulatingSettings, iconClass: 'icon-[simple-icons--retroarch]', name: 'emulating' },
-  { content: AccountSettings, iconClass: 'icon-[mdi--account]', name: 'account' },
+  { content: LibrarySettings, iconClass: 'icon-[mdi--bookshelf]', name: 'knihovna' },
+  { content: InputsSettings, iconClass: 'icon-[mdi--controller]', name: 'vstupy' },
+  { content: EmulatingSettings, iconClass: 'icon-[simple-icons--retroarch]', name: 'emulace' },
+  { content: AccountSettings, iconClass: 'icon-[mdi--account]', name: 'účet' },
 ]
 
 export function SettingsDialog({ onOpenChange, ...props }: Readonly<Dialog.RootProps>) {
@@ -35,7 +35,7 @@ export function SettingsDialog({ onOpenChange, ...props }: Readonly<Dialog.RootP
       <Dialog.Content aria-describedby={undefined} className='lg:!w-5xl' maxWidth='calc(100vw - var(--space-8))'>
         <Dialog.Title className='flex items-center gap-2'>
           <span className='icon-[mdi--cog] ' />
-          Settings
+          Nastavení
         </Dialog.Title>
 
         <div>
@@ -64,13 +64,13 @@ export function SettingsDialog({ onOpenChange, ...props }: Readonly<Dialog.RootP
         <div className='mt-4 flex justify-between'>
           <div className='text-(--accent-9) flex items-center gap-2 text-xs'>
             <span className='icon-[mdi--info]' />
-            Your settings will be saved and take effect immediately once changed.
+            Vaše nastavení bude uloženo a změny se projeví okamžitě.
           </div>
         </div>
 
         <div className='absolute right-6 top-6'>
           <Dialog.Close>
-            <Button title='Close' variant='ghost'>
+            <Button title='Zavřít' variant='ghost'>
               <span className='icon-[mdi--close] size-5' />
             </Button>
           </Dialog.Close>

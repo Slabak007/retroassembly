@@ -43,7 +43,7 @@ export function LayoutMenu() {
 
           <DropdownMenu.Item onClick={handleClickSettings}>
             <span className='icon-[mdi--cog]' />
-            Settings
+            Nastavení
           </DropdownMenu.Item>
 
           <ThemeMenuItem />
@@ -52,7 +52,7 @@ export function LayoutMenu() {
 
           <DropdownMenu.Item onClick={() => setAboutDialogOpen(true)}>
             <span className='icon-[mdi--information]' />
-            About
+            O aplikaci
           </DropdownMenu.Item>
 
           {links.map((link) => (
@@ -71,7 +71,7 @@ export function LayoutMenu() {
 
           <DropdownMenu.Item color='red' onClick={() => setLogoutDialogOpen(true)}>
             <span className='icon-[mdi--logout]' />
-            Log out
+            Odhlásit
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Root>

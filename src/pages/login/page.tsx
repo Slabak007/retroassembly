@@ -13,10 +13,10 @@ export function LoginPage() {
     return <PageContainer title='Log in'>{error.message}</PageContainer>
   }
 
-  const title = formType === 'register' ? metadata.title : `Log in to ${metadata.title}`
+  const title = formType === 'register' ? metadata.title : `Přihlášení do ${metadata.title}`
   const description = {
-    oauth: 'Log in to build your own retro game collection',
-    register: 'Create an account to get started',
+    oauth: 'Přihlaste se a vytvořte si svou vlastní sbírku retro her.',
+    register: 'Pro začátek vytvořte účet',
   }[formType]
   return (
     <PageContainer description={description} title={title}>

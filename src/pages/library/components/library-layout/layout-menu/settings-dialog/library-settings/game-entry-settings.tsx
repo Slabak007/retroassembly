@@ -17,7 +17,7 @@ export function GameEntrySettings() {
           <label className='flex flex-col gap-2'>
             <SettingsTitle className='text-base'>
               <span className='icon-[mdi--grid]' />
-              Game Cover Size
+              Velikost obalu hry
             </SettingsTitle>
             <div className='px-6'>
               <RadioCards.Root
@@ -52,7 +52,7 @@ export function GameEntrySettings() {
           <label className='flex items-center gap-2'>
             <SettingsTitle className='mb-0 text-base'>
               <span className='icon-[mdi--text-long]' />
-              Show Game Titles
+              Zobrazit názvy her
             </SettingsTitle>
             <Switch
               checked={preference.ui.showTitle}
@@ -65,7 +65,7 @@ export function GameEntrySettings() {
             <label className='flex items-center gap-2'>
               <SettingsTitle className='mb-0 text-base'>
                 <span className='icon-[mdi--earth]' />
-                Show District on Game Titles
+                Zobrazit oblast u názvů her
               </SettingsTitle>
               <Switch
                 checked={preference.ui.showDistrictOnTitle}
@@ -78,7 +78,7 @@ export function GameEntrySettings() {
           <label className='flex items-center gap-2'>
             <SettingsTitle className='mb-0 text-base'>
               <span className='icon-[mdi--text-long]' />
-              Show Focus Indicators
+              Zobrazit indikátory fokusu
             </SettingsTitle>
             <Select.Root
               onValueChange={(value) => update({ ui: { showFocusIndicators: value } })}
@@ -88,8 +88,8 @@ export function GameEntrySettings() {
               <Select.Trigger />
               <Select.Content>
                 <Select.Item value='auto'>Auto</Select.Item>
-                <Select.Item value='always'>Always</Select.Item>
-                <Select.Item value='never'>Never</Select.Item>
+                <Select.Item value='always'>Vždy</Select.Item>
+                <Select.Item value='never'>Nikdy</Select.Item>
               </Select.Content>
             </Select.Root>
           </label>

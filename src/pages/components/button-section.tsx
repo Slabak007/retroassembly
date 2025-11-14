@@ -21,7 +21,7 @@ export function ButtonSection() {
 
       <div className='lg:w-2xl motion-preset-oscillate-sm motion-duration-3000 bg-(--color-background) [.dark_&]:bg-(--gray-2) relative mx-8 rounded-xl p-10 shadow-[0_0_32px_rgba(0,0,0,0.1)] lg:mx-auto'>
         <h2 className='text-(--accent-9) flex items-center justify-center gap-2 text-center text-xl font-semibold lg:text-3xl'>
-          Start to enjoy retro gaming now!
+          Začni si užívat retro hry hned teď!
         </h2>
 
         <ButtonLinks />

@@ -67,7 +67,7 @@ export function FixedHeader() {
           <Button asChild radius='full' size='2' type='button' variant='outline'>
             <Link className='!border-2 !bg-white !shadow-none' reloadDocument to='/login'>
               <span className='icon-[mdi--user-box]' />
-              Log in
+              Přihlásit
             </Link>
           </Button>
         )}

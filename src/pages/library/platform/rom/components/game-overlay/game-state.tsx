@@ -81,7 +81,7 @@ export function GameState({ state }: Readonly<{ state: InferResponseType<typeof 
           <span className='icon-[svg-spinners--180-ring] text-(--accent-9) block size-3' />
         ) : (
           <>
-            Saved at <Badge>{humanizeDate(state.createdAt)}</Badge>
+            Uloženo <Badge>{humanizeDate(state.createdAt)}</Badge>
           </>
         )}
       </div>

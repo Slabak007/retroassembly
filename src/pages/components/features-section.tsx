@@ -14,9 +14,9 @@ const features = [
         <span className='icon-[logos--firefox] motion-delay-300 size-14' />
       </div>
     ),
-    description: 'Play retro games directly in your browser without additional software.',
+    description: 'Hraj retro hry přímo ve svém prohlížeči bez dalšího softwaru.',
     icon: 'icon-[mdi--web-box]',
-    title: 'Browser-Based Gameplay',
+    title: 'Hraní v prohlížeči',
   },
   {
     content: (
@@ -33,14 +33,14 @@ const features = [
             </div>
           ))}
           <div className='text-(--accent-9) flex items-center justify-center text-center font-semibold'>
-            ...and more
+            ...a další
           </div>
         </div>
       </div>
     ),
-    description: 'Supports a wide range of retro gaming systems.',
+    description: 'Podpora široké škály retro herních systémů.',
     icon: 'icon-[mdi--dice-multiple]',
-    title: 'Multi-Platform Support',
+    title: 'Podpora více platforem',
   },
   {
     content: (
@@ -59,9 +59,9 @@ const features = [
         <span className='icon-[noto--desktop-computer] size-16' />
       </div>
     ),
-    description: 'Sync your games and states then access them from anywhere.',
+    description: 'Synchronizujte své hry a stavy a přistupujte k nim odkudkoli.',
     icon: 'icon-[mdi--cloud]',
-    title: 'Cloud Sync',
+    title: 'Cloudová synchronizace',
   },
   {
     content: (
@@ -82,9 +82,9 @@ const features = [
         ))}
       </div>
     ),
-    description: "Automatically fetch game boxarts to enhance your library's visual appeal.",
+    description: 'Automaticky stahuje obaly her pro lepší vizuální zážitek z knihovny.',
     icon: 'icon-[mdi--drawing-box]',
-    title: 'Automatic Boxart Retrieval',
+    title: 'Automatické stahování obalů',
   },
   {
     content: (
@@ -101,9 +101,9 @@ const features = [
         <DemoFocusIndicator />
       </div>
     ),
-    description: 'Navigate seamlessly using a keyboard or a gamepad without needing a mouse.',
+    description: 'Pohybujte se bez myši pomocí klávesnice nebo gamepadu.',
     icon: 'icon-[mdi--controller-round]',
-    title: 'Keyboard/Gamepad-Friendly Navigation',
+    title: 'Navigace pro klávesnici/gamepad',
   },
   {
     content: (
@@ -121,12 +121,12 @@ const features = [
     ),
     description: (
       <>
-        Rewind gameplay using "R" on the keyboard or a controller button combination (<kbd>Select</kbd> + <kbd>L2</kbd>
+        Přehrávejte hru zpět pomocí klávesy "R" na klávesnici nebo kombinace tlačítek na gamepadu (<kbd>Select</kbd> + <kbd>L2</kbd>
         ).
       </>
     ),
     icon: 'icon-[mdi--clock-arrow]',
-    title: 'Rewind Gameplay',
+    title: 'Přehrávání zpět',
   },
 ]
 
@@ -142,7 +142,7 @@ export function FeaturesSection() {
         }}
       >
         <span className='icon-[mdi--gift]' />
-        Features
+        Funkce
       </h2>
 
       <ul className='flex flex-col'>
@@ -171,7 +171,7 @@ export function FeaturesSection() {
               <div className='lg:flex lg:items-center lg:justify-center'>
                 <figure className='bg-(--color-background) ring-(--color-text)/10 rounded p-2 ring-1'>
                   <div className='lg:w-100 aspect-5/3 lg:h-60'>{feature.content}</div>
-                  <figcaption className='sr-only'>Demo or visual for {feature.title}</figcaption>
+                  <figcaption className='sr-only'>Demo nebo vizualizace pro {feature.title}</figcaption>
                 </figure>
               </div>
             </article>

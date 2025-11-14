@@ -51,7 +51,7 @@ export function LoginForm({ redirectTo }: Readonly<{ redirectTo: string }>) {
           type='submit'
         >
           <span className='icon-[mdi--account-check] text-xl' />
-          Log in
+          Přihlásit
         </Button>
 
         <AnimatePresence>
