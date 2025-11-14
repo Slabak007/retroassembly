@@ -6,7 +6,7 @@ import { sessionTable, statusEnum, userTable } from '@/databases/schema.ts'
 import { getConnInfo } from '@/utils/server/misc.ts'
 import { nanoid } from '@/utils/server/nanoid.ts'
 
-const invalidException = new HTTPException(401, { message: 'Invalid username or password' })
+const invalidException = new HTTPException(401, { message: 'Špatné uživatelské jméno nebo heslo' })
 
 export async function createSession({ password, username }: { password: string; username: string }) {
   const c = getContext()
