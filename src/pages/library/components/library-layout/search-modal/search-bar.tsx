@@ -33,21 +33,21 @@ export function SearchBar() {
     ? `/library/platform/${encodeURIComponent(selectedResult.platform)}/rom/${encodeURIComponent(selectedResult.fileName)}`
     : ''
   const select = useCallback(
-    function select() {
+    async function select() {
       if (selectedUrl) {
         setShowSearchModal(false)
         setSpatialNavigationPaused(false)
         if (selectedUrl !== location.pathname) {
-          navigate(selectedUrl)
+          await navigate(selectedUrl)
         }
       }
     },
     [location.pathname, selectedUrl, setShowSearchModal, setSpatialNavigationPaused, navigate],
   )
 
-  function handleSubmit(event: FormEvent) {
+  async function handleSubmit(event: FormEvent) {
     event.preventDefault()
-    select()
+    await select()
   }
 
   const move = useCallback(
@@ -89,7 +89,7 @@ export function SearchBar() {
 
   useEffect(
     () =>
-      Gamepad.onPress(({ button }) => {
+      Gamepad.onPress(async ({ button }) => {
         if (`${button}` === inputMapping.gamepad.input_player1_down_btn) {
           move('down')
         }
@@ -97,7 +97,7 @@ export function SearchBar() {
           move('up')
         }
         if (`${button}` === inputMapping.confirmButton) {
-          select()
+          await select()
         }
       }),
     [move, inputMapping, select],

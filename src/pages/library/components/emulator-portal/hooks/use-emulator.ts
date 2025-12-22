@@ -35,6 +35,8 @@ const defaultRetroarchConfig: RetroarchConfig = {
   input_rewind_btn: 6, // L2
   rewind_enable: true,
   rewind_granularity: 4,
+  run_ahead_enabled: true,
+  run_ahead_frames: 1,
 }
 
 let wakeLock: undefined | WakeLockSentinel
@@ -52,7 +54,8 @@ export function useEmulator() {
   const [, setSpatialNavigationPaused] = useSpatialNavigationPaused()
 
   const romUrl = isDemo
-    ? getCDNUrl(`retrobrews/${{ genesis: 'md' }[rom.platform] || rom.platform}-games`, rom.fileName)
+    ? // @ts-expect-error we can guarantee the platform is supported here
+      getCDNUrl(`retrobrews/${{ genesis: 'md' }[rom.platform] || rom.platform}-games`, rom.fileName)
     : getFileUrl(rom.fileId) || ''
   const { core } = preference.emulator.platform[rom.platform] || {}
 
@@ -141,7 +144,7 @@ export function useEmulator() {
     }
 
     if (preference.emulator.fullscreen) {
-      toggleFullscreen()
+      await toggleFullscreen()
     }
     try {
       wakeLock = await navigator.wakeLock.request('screen')
